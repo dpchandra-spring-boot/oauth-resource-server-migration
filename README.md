@@ -90,4 +90,31 @@ Step 4:
    	    
 Step 5:
 
+	Add below part to application.yml file
+		security:
+		  basic:
+		    enabled: false
+		  oauth2:
+		    server:
+			contextPath: ${urls.oauth.server}/
+		    client:
+		      clientId: ClientId
+		      clientSecret: secret
+		      accessTokenUri: ${urls.oauth.server}/oauth/token
+		      userAuthorizationUri: ${urls.oauth.server}/oauth/authorize?clientUrl=${urls.app.server}&app=Opti-Plan
+		      logoutUri: ${urls.oauth.server}/exit
+		    resource:
+		      userInfoUri: ${urls.oauth.server}/principal
+		      filter-order : 3
+		spring:
+		  thymeleaf:
+		    cache: false
+		    
+	Add below property related to cors origin in the application.yml file
+		cors:
+		    allow.origin: https://test.saddlepointtech.com, https://demo.saddlepointtech.com. https://scpcloudsuite.saddlepointtech.com, https://localhost
+
+   	    
+Step 6:
+
 	Add HealthCheckResource.java in resources package
