@@ -43,7 +43,7 @@ Step 4:
 	
 	Add below part to the Application.java
 	
-	@Value("${security.oauth2.client.accessTokenUri}")
+            @Value("${security.oauth2.client.accessTokenUri}")
 	    private String accessTokenUri;
 	
 	    @Value("${security.oauth2.client.userAuthorizationUri}")
