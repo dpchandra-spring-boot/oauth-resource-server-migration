@@ -78,7 +78,7 @@ Step 4:
 	    }
 	
 	    @Bean
-	    public FilterRegistrationBean<SimpleCORSFilter> loggingFilter() {
+	    public FilterRegistrationBean<SimpleCORSFilter> simpleCorsFilter() {
 	        FilterRegistrationBean<SimpleCORSFilter> registrationBean
 	                = new FilterRegistrationBean<>();
 	
